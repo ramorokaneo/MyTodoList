@@ -1,4 +1,3 @@
-// reducers.js
 const initialState = {
     isLoggedIn: false,
     user: null,
@@ -7,9 +6,7 @@ const initialState = {
   export const loginReducer = (state = initialState, action) => {
     switch (action.type) {
       case 'LOGIN':
-        // Perform your actual login authentication logic here
-        // For this example, we're simply checking if the username and password are 'admin'
-        if (action.payload.username === 'admin' && action.payload.password === 'admin') {
+               if (action.payload.username === 'admin' && action.payload.password === 'admin') {
           return {
             ...state,
             isLoggedIn: true,
@@ -26,4 +23,20 @@ const initialState = {
         return state;
     }
   };
+
+const initialState = {
+    todos: [],
+},
+
+export const todoReducer = (state = initialState, action) => {
+    switch (action.type) {
+        case 'FETCH_TODOS': 
+            return {
+                ...state,
+                todos: action.payload,
+            };
+        default:
+            return state;
+    }
+};
   
