@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Todo.css'; 
 
 function TodoList() {
   const [todos, setTodos] = useState([]);
@@ -66,14 +67,14 @@ function TodoList() {
   };
 
   return (
-    <div>
+    <div className="card">
       <h1>Todo List</h1>
       <div>
         <input type="text" value={inputValue} onChange={handleInputChange} />
         <select value={priority} onChange={handlePriorityChange}>
           <option value="">Select Priority</option>
           <option value="red">Most Important</option>
-          <option value="yellow">Important</option>
+          <option value="orange">Important</option>
           <option value="green">Least Important</option>
         </select>
         <button onClick={handleAddTodo}>{editIndex !== -1 ? 'Update' : 'Add'}</button>
@@ -81,14 +82,11 @@ function TodoList() {
       <ul>
         {todos.map((todo, index) => (
           <li key={index}>
-            <span style={{ textDecoration: todo.done ? 'line-through' : 'none', color: todo.priority }}>
+            <span className={todo.done ? 'completed' : ''} style={{ color: todo.priority }}>
               {todo.text}
             </span>
-            <br />
             <span>Added: {todo.addedTime}</span>
-            <br />
             {todo.completedTime && <span>Completed: {todo.completedTime}</span>}
-            <br />
             <button onClick={() => handleToggleTodo(index)}>{todo.done ? 'Undo' : 'Done'}</button>
             <button onClick={() => handleEditTodo(index)}>Edit</button>
             <button onClick={() => handleDeleteTodo(index)}>Delete</button>

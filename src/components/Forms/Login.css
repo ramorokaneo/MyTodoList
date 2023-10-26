@@ -1,0 +1,43 @@
+.card {
+    border: 2px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    background: #fff;
+    max-width: 400px;
+    border-radius: 10px; /* Rounded corners for the card */
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  label {
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 50%;
+    border-radius: 5px; /* Rounded corners for the input fields */
+  }
+  
+  .login-button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners for the button */
+    margin-top: 10px;
+  }
+  
+  .login-button:hover {
+    background-color: #333;
+  }
+  

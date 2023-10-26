@@ -1,0 +1,95 @@
+.card {
+    border: 2px solid #333;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    background: #e6e6fa;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .card h1 {
+    text-align: center;
+    font-size: 24px;
+  }
+  
+  .card input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .card select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .card button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .card button:hover {
+    background-color: #333;
+  }
+  
+  .card ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .card li {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+  }
+  
+  .card li span {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .card li span.completed {
+    text-decoration: line-through;
+  }
+  
+  .card li span.red {
+    color: red;
+  }
+  
+  .card li span.orange {
+    color: orange;
+  }
+  
+  .card li span.green {
+    color: green;
+  }
+  .card select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff; /* Background color for the select */
+    color: #333; /* Text color */
+    font-size: 16px; /* Text size */
+    cursor: pointer;
+  }
+  .card ul li button {
+    margin-right: 10px; /* Add space to the right of each button */
+  }
+  
+  
+  

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
+import './Registration.css'; // Import the CSS file for your component
 
 function Registration() {
   const dispatch = useDispatch();
@@ -55,7 +56,7 @@ function Registration() {
   };
 
   return (
-    <div>
+    <div className="card"> {/* Apply card styling using a CSS class */}
       <h1>Registration Page</h1>
       <form onSubmit={handleSubmit}>
         <div>

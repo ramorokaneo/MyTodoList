@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { login } from '../Forms/action';
+import './Login.css'; 
 
 function Login() {
   const dispatch = useDispatch();
@@ -21,29 +22,24 @@ function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validate the form inputs
     if (username.trim() === '' || password.trim() === '') {
       setError('Please enter both username and password.');
       return;
     }
 
-    // Dispatch the login action or handle the authentication
-    dispatch(login(username, password)); // Replace with your login action
-
-    // Clear the form fields
+    dispatch(login(username, password));
     setUsername('');
     setPassword('');
     setError('');
 
-    // Redirect to ToDo List page after successful login
     navigate('/todo-list');
   };
 
   return (
-    <div>
+    <div className="card">
       <h1>Login Page</h1>
       <form onSubmit={handleSubmit}>
-        {error && <p>{error}</p>}
+        {error && <p className="error">{error}</p>}
         <label>
           Username:
           <input type="text" value={username} onChange={handleUsernameChange} />
@@ -54,9 +50,9 @@ function Login() {
           <input type="password" value={password} onChange={handlePasswordChange} />
         </label>
         <br />
-        <button type="submit">Login</button>
+        <button type="submit" className="login-button">Login</button>
       </form>
-      <Link to="/forgot-password">Forgot Password?</Link>
+      <Link to="/registration">Don't have an account? Register</Link>
     </div>
   );
 }
